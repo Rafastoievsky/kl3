@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Banner from '../components/inicio/Banner.astro'
+import Proceso from '../components/inicio/Proceso.astro';
+import Numeros from '../components/inicio/Numeros.astro';
+import Respaldo from '../components/inicio/Respaldo.astro';
+import Contacto from '../components/inicio/Contacto.astro';
+import Listado from '../components/propiedades/Listado.astro';
+import 'leaflet/dist/leaflet.css';
+---
+
+<Layout title="Welcome to Astro." description='test'>
+	<main>
+		<Banner />
+		<Numeros />
+		<Listado />
+		<Respaldo />
+		<Proceso />
+		<Contacto /> 
+	</main>
+</Layout>
+
+<style>
+
+</style>

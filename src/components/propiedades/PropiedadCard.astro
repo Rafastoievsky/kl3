@@ -1,0 +1,55 @@
+---
+import casa01 from '../../assets/img/casa01.jpg'
+import { Image } from 'astro:assets';
+import {markerHouse, metersHouse, roomsHouse} from '../../assets'
+import type { Code } from 'astro:components';
+import type { Code } from 'astro:components';
+interface Props {
+	data: {
+        id: number,
+        picture: ImageMetadata,
+        colonia: string,
+        direccion: string,
+        size: string,
+        habitaciones: string,
+        costo: string,
+    } 
+}
+
+const { data } = Astro.props;
+---
+
+<div class="bg-white shadow-xl p-4 flex">
+    <a href="#">
+        <Image class="imgIcon h-14 col-span-1" src={casa01} alt={'llamada'} /> 
+    </a>
+    <div class="grid grid-cols-4 mb-2">
+        <Image class="imgIcon h-10 col-span-1" src={markerHouse} alt={'marker'} /> 
+        <p class="text-xl font-light col-span-3">{data.colonia}</p>
+    </div>
+    <p>{data.direccion}</p>
+    <div class="grid grid-cols-2 mb-2">
+        <p class="bg-mainBlue w-[100px] text-white text-center font-bold">{data.costo}</p>
+        <div class="flex">
+            <div class="grid grid-cols-4 mb-2">
+                <p class="text-xl font-light col-span-3">{data.size}<sup>2</sup></p>
+                <Image class="imgIcon h-10 col-span-1" src={metersHouse} alt={'meters'} /> 
+            </div>
+            <div class="grid grid-cols-4 mb-2">
+                <p class="text-xl font-light col-span-3">{data.habitaciones}</p>
+                <Image class="imgIcon h-10 col-span-1" src={roomsHouse} alt={'rooms'} /> 
+            </div>
+
+        </div>
+    </div>
+    
+
+
+
+</div>
+
+<style>
+    sup {
+      font-size: 0.8em; /* Ajusta el tamaño según tus preferencias */
+    }
+  </style>

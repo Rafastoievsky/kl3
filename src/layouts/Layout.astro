@@ -1,0 +1,76 @@
+---
+import Header from "../components/ui/Header.astro";
+import Footer from "../components/ui/Footer.astro";
+
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta
+      name="keywords"
+      content="construction, remodeling, Phoenix, Arizona, backyards, kitchens, bathrooms, tile installation, drywall, paint, plumbing, cabinets, electricity, frames, countertops"
+    />
+    <meta name="viewport" content="width=device-width" />
+    <meta
+      property="og:title"
+      content="Valzep Construction | Expert Construction & Remodeling Services in Phoenix, AZ"
+    />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={""} />
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
+    <meta property="og:url" content="valzepconstruction.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Valzep Construction" />
+    <meta property="og:locale" content="en_US" />
+    <meta
+      name="facebook-domain-verification"
+      content="ewqeypwmunt89lupbrxezxndi8fjzl"
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+  crossorigin=""/>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+
+  <body>
+    <Header />
+    <slot />
+    <Footer />
+  </body>
+</html>
+<style is:global>
+  body {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  /* NAVBAR */
+
+  .navegacion a:hover,
+  .active {
+    border: #fff solid 2px;
+    padding: 0.5rem;
+  }
+
+  .img-hover-transform:hover {
+    transform: translateZ(20px);
+  }
+
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* horizontal offset, vertical offset, blur radius, color */
+  }
+</style>

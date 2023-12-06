@@ -1,0 +1,90 @@
+---
+
+import ContactForm from './ContactForm'
+import Map from './Map.svelte'
+import { telefono, maletin, tiktok, llamada, instagram, facebook  } from '../../assets'
+
+import { Image } from 'astro:assets';
+const pathname = Astro.url.pathname;
+
+---
+
+<div id="contact" class=" bg-gray-50 flex flex-col justify-center items-center pb-12 ">
+    <div class="mb-10 bg-mainBlue text-center w-full py-16">
+        <h2 class="text-white text-5xl font-bold">¡CONTÁCTANOS Y TRABAJEMOS JUNTOS</h2>
+        <h1 class="text-white text-7xl  font-bold">EN ENCONTRAR TU LUGAR IDEAL!</h1>
+    </div>
+    <div class="grid md:grid-cols-4 ">
+
+        <div class="flex flex-col justify-center pt-8 order-3 md:order-1">
+            <p class="text-lg text-center font-light text-mainBlue">kl3.bienesraices@gmail.com</p>
+            <div class="flex my-5">
+                <a href="#">
+                    <Image class="imgIcon h-14 col-span-1" src={llamada} alt={'llamada'} /> 
+                </a>
+                <a href="#">
+                    <Image class="imgIcon h-14 col-span-1" src={tiktok} alt={'tiktok'} /> 
+                </a>
+                <a href="#">
+                    <Image class="imgIcon h-14 col-span-1" src={instagram} alt={'instagram'} /> 
+                </a>
+                <a href="#">
+                    <Image class="imgIcon h-14 col-span-1" src={facebook} alt={'facebook'} /> 
+                </a>
+            </div>
+            <div class="flex flex-col  p-4  bg-mainBlue contactBg text-white mb-10">
+         
+                    <div class="grid grid-cols-4 mb-2">
+                        <Image class="imgIcon h-10 col-span-1" src={maletin} alt={'maletin'} /> 
+                        <p class="text-xl font-light col-span-3">Claudia Yolanda 
+                                Chávez Inzunza</p>
+                    </div>
+                    <div class="grid grid-cols-4">
+                                
+                        <Image class="imgIcon h-10 col-span-1" src={telefono} alt={'call'} /> 
+                        <p class="text-xl font-light mt-1  col-span-3">(662) 104-4320</p>
+                    </div>
+
+              
+            </div>
+            <div class="flex flex-col  p-4  bg-mainBlue contactBg text-white">
+         
+                    <div class="grid grid-cols-4 mb-2">
+                        <Image class="imgIcon h-10 col-span-1" src={maletin} alt={'maletin'} /> 
+                        <p class="text-xl font-light col-span-3">Luis Carlos <br />
+                                Tánori</p>
+                    </div>
+                    <div class="grid grid-cols-4">
+                                
+                        <Image class="imgIcon h-10 col-span-1" src={telefono} alt={'call'} /> 
+                        <p class="text-xl font-light mt-1  col-span-3">(662) 400-0007</p>
+                    </div>
+
+              
+            </div>
+        </div>
+        <div class="md:col-span-2 md:mx-5 order-2">
+            <ContactForm client:load pathname={pathname} />
+
+        </div>
+
+        <div class="flex flex-col justify-center items-center pt-6 pr-8 order-1 md:order-3 pb-8">
+            <Map client:visible  zoom={14} markerMarkup="<p>We are here!</p>" />
+            <div>
+                <p class="text-mainBlue mt-2">Carlos Caturegli No. 222 entre <br/>
+                    periférico norte y Eduardo W Villa <br/> 
+                    col. Olivares
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<style>
+
+  
+    .contactBg{
+      border-radius: 0 0 30px 0 ;
+    }
+  </style>

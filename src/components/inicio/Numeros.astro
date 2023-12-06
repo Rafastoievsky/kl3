@@ -1,0 +1,26 @@
+---
+import { numbersCardsData } from "../../constants";
+
+import NumberCards from "./NumberCards.astro";
+
+---
+<div class="md:px-[15rem] gap-4 items-center justify-center py-12">
+    <h2 class="text-4xl text-mainBlue text-center font-bold">
+        MÁS DE UNA DÉCADA LIDERANDO EL MERCADO INMOBILIARIO
+    </h2>
+    <h1 class="text-6xl text-mainBlue text-center font-bold">
+        CON SATISFACCIÓN GARANTIZADA
+    </h1>
+    <div class="pt-10">
+        {
+            numbersCardsData.map((item) => (
+
+
+                    <NumberCards data={item} />
+            
+                )
+            )
+        }
+
+    </div>
+</div>

@@ -1,0 +1,33 @@
+---
+interface Props {
+	data: {
+        id: number,
+        icon: ImageMetadata,
+        iconPosition: string,
+        title: string,
+        number: string,
+    } 
+}
+
+const { data } = Astro.props;
+
+import { Image } from 'astro:assets';
+---
+<div class="md:px-[8rem] gap-4 items-center justify-center">
+
+    <div class={`relative bg-mainBlue p-6 rounded-3xl  
+                my-12 `}>
+        <Image
+            class={`md:w-[200px] absolute top-1/2 transform -translate-x-1/2 -translate-y-1/2
+            ${data.iconPosition == 'start' ? 'left-0' : 'right-[-20%]' }`}
+            src={data.icon}
+            alt="Nuestro Proceso"
+        />
+        <div class="bg-secondBlue rounded-3xl p-4 w-full">
+            <h1 class={`text-white text-4xl flex items-center font-bold 
+            ${data.iconPosition == 'start' ? 'pl-[12%] justify-start ' : 'justify-end pr-[12%]' }`}>
+               <span class="text-5xl pr-2">{data.number}</span>  {data.title}
+            </h1>
+        </div>
+    </div>
+</div>

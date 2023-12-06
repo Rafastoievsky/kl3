@@ -1,0 +1,24 @@
+---
+
+import {propiedadesList} from '../../constants'
+import PropiedadCard from './PropiedadCard.astro';
+
+
+---
+<div class="md:px-[15rem] gap-4 items-center justify-center py-12">
+    <h2 class="text-4xl text-mainBlue text-left font-extrabold">
+        PROPIEDADES DISPONIBLES
+    </h2>
+
+    <div class="pt-10">
+
+        {
+            propiedadesList.map((propiedad:any)=>(
+                <PropiedadCard data={propiedad} />
+            ))
+
+        }
+
+
+    </div>
+</div>
