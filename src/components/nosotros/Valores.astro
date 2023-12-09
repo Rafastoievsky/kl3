@@ -1,0 +1,57 @@
+---
+import { Image } from 'astro:assets';
+import { calidad, compromiso, confianza, excelencia, honestidad, orientacion } from '../../assets'
+---
+
+<div class="flex flex-col justify-center py-40  bg-[#596C8A] text-white">
+    <div class="md:px-[15rem]">
+        <h1 class="md:text-8xl text-3xl font-bold text-center mb-8">
+            LOS VALORES <br />
+            QUE NOS REPRESENTAN
+        </h1>
+    
+        <h2 class="text-2xl text-justify">
+            En KL3 Bienes Raíces, nuestros valores son la brújula que guía nuestro trabajo diario. La 
+            confianza que depositan en nosotros, la calidad que ofrecemos en cada servicio, nuestra 
+            honestidad inquebrantable, la orientación al resultado, el compromiso con nuestros clientes 
+            y la búsqueda constante de la excelencia son los pilares sobre los que construimos 
+            relaciones sólidas y el éxito en el mercado inmobiliario.
+    
+    
+        </h2>
+
+
+    </div>
+    <div class="grid grid-cols-6 mt-10 gap-6 md:px-[12rem]">
+        <div class="flex flex-col text-center justify-center items-center">
+            <Image class="w-32 items-start h-32 my-4 " src={calidad} alt={'Calidad'} /> 
+            <p class="text-2xl font-bold">CALIDAD</p>
+        </div>
+        <div class="flex flex-col text-center justify-center items-center">
+            <Image class="w-32 items-start h-32 my-4" src={honestidad} alt={'honestidad'} /> 
+            <p class="text-2xl font-bold">HONESTIDAD</p>
+        </div>
+        <div class="flex flex-col text-center justify-center items-center">
+            <Image class="w-32 items-start h-32 my-4" src={excelencia} alt={'excelencia'} /> 
+            <p class="text-2xl font-bold">EXCELENCIA</p>
+        </div>
+        <div class="flex flex-col text-center justify-center items-center">
+            <Image class="w-32 items-start h-32 my-4" src={orientacion} alt={'orientacion'} /> 
+            <p class="text-2xl font-bold">ORIENTACION</p>
+        </div>
+        <div class="flex flex-col text-center justify-center items-center">
+            <Image class="w-32 items-start h-32 my-4" src={compromiso} alt={'compromiso'} /> 
+            <p class="text-2xl font-bold">COMPROMISO</p>
+        </div>
+        <div class="flex flex-col text-center justify-center items-center">
+            <Image class="w-32 items-start h-32 my-4" src={confianza} alt={'confianza'} /> 
+            <p class="text-2xl font-bold">CONFIANZA</p>
+        </div>
+
+
+
+    </div>
+
+
+
+</div>

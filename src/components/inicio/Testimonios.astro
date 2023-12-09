@@ -1,0 +1,60 @@
+---
+import { tetimoniosList } from "../../constants";
+import { Image } from 'astro:assets';
+
+import {messageLeft, messageRight} from '../../assets'
+
+interface testimonio{
+    id: number;
+    nombre: string;
+    edad: string;
+    servicio: string;
+    comentario:string;
+    picture:ImageMetadata;
+}
+
+---
+
+<div class="justify-center py-40 md:px-[15rem] ">
+    <h2 class="text-6xl text-mainBlue text-left font-extrabold mb-12">
+        NUESTROS CLIENTES NOS AVALAN
+    </h2>
+
+    {
+        tetimoniosList.map((item:testimonio)=>(
+        <div class="mb-4">
+                <div class="flex mb-4 ml-[10%]">
+                    <p class={`${item.id % 2 === 0 ? 'bg-secondBlue':'bg-mainBlue'} text-white rounded-full text-3xl font-light  py-2 px-8`}>{`${item.nombre}, ${item.edad}`}</p>
+                </div>
+                <div class="flex mb-4 ml-[10%]">
+                    <p class={`${item.id % 2 === 0 ? 'bg-secondBlue':'bg-mainBlue'} text-white rounded-full text-3xl font-light  py-2 px-8`}>{item.servicio}</p>
+                </div>
+
+
+            <div class={`flex  ${item.id % 2 === 0 ? 'flex-row-reverse' : ''}`}>
+                <div class="flex items-end">
+                    <Image class="h-20 items-start w-20 mr-4 rounded-full" 
+                    src={item.picture } alt={item.nombre} /> 
+                </div>
+                <div class="relative">
+                    <img src={item.id % 2 === 0 ? messageRight.src : messageLeft.src } alt="Nubes de conversación" class="w-[750px] h-auto ">
+                    
+ 
+                    <p class="absolute top-1/2 left-1/2 transform w-3/4
+                    -translate-x-1/2 -translate-y-1/2 text-2xl text-white">
+                        {item.comentario}
+                    </p>
+                </div>
+        
+            </div>
+        </div>
+
+        ))
+    }
+
+</div>
+<style>
+
+
+
+</style>

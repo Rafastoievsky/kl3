@@ -1,0 +1,54 @@
+---
+import { Image } from 'astro:assets';
+import { mision, nosotros04, nosotros05, vision } from '../../assets'
+
+---
+
+<div class="grid grid-cols-2">
+
+    <div class="col-span-1">
+        <Image class="w-full items-start h-auto mr-4" src={nosotros04} alt={'Nosotros04'} /> 
+    </div>
+    <div class="flex flex-col p-8 justify-center items-center ">
+        <Image class="w-72 items-center h-auto mr-4 mb-8" src={mision} alt={'Mision'} /> 
+        <h2 class="text-mainBlue md:text-5xl text-3xl font-bold text-center mb-4">
+            NUESTRA MISIÓN
+        </h2>
+        <p class="text-2xl font-light text-justify">
+            Nuestra misión es brindar un servicio 
+            inmobiliario de excelencia, caracterizado por la 
+            responsabilidad y la profesionalidad en cada 
+            transacción. Nos esforzamos por satisfacer las 
+            necesidades de nuestros clientes de manera 
+            oportuna y efectiva, añadiendo valor a sus 
+            inversiones y a sus vidas a través de soluciones 
+            inmobiliarias sólidas.
+
+        </p>
+
+
+    </div>
+    <div class="flex flex-col p-8 justify-center items-center ">
+        <Image class="w-72 items-center h-auto mr-4 mb-8" src={vision} alt={'Vision'} /> 
+        <h2 class="text-mainBlue md:text-5xl text-3xl font-bold text-center mb-4">
+            NUESTRA VISIÓN
+        </h2>
+        <p class="text-2xl font-light text-justify">
+            Aspiramos a ser la empresa líder en el sector 
+            inmobiliario de nuestra región, distinguiéndonos 
+            por nuestra gestión de propiedades de alta 
+            calidad y por la satisfacción inquebrantable de 
+            nuestros clientes. Nuestra visión es ayudar a las 
+            personas a encontrar el lugar adecuado para ellos,
+            contribuyendo al bienestar de comunidades y generando 
+            un impacto positivo en el mercado inmobiliario.
+            
+        </p>
+        
+        
+    </div>
+    <div class="col-span-1">
+        <Image class="w-full items-start h-auto mr-4" src={nosotros05} alt={'Nosotros05'} /> 
+    </div>
+
+</div>

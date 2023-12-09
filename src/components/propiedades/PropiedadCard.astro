@@ -1,9 +1,8 @@
 ---
-import casa01 from '../../assets/img/casa01.jpg'
+
 import { Image } from 'astro:assets';
-import {markerHouse, metersHouse, roomsHouse} from '../../assets'
-import type { Code } from 'astro:components';
-import type { Code } from 'astro:components';
+import {markerHouse, metersHouse, roomsHouse, watermarkkl13} from '../../assets'
+
 interface Props {
 	data: {
         id: number,
@@ -19,25 +18,31 @@ interface Props {
 const { data } = Astro.props;
 ---
 
-<div class="bg-white shadow-xl p-4 flex">
+<div class="bg-white shadow-xl p-8 flex flex-col justify-center">
     <a href="#">
-        <Image class="imgIcon h-14 col-span-1" src={casa01} alt={'llamada'} /> 
+        <div class="watermark-container">
+            <img class="w-full h-[190px]" src={data.picture.src} alt={'casa'} /> 
+            <img class="watermark" src={watermarkkl13.src} alt={'watermark'} /> 
+        </div>
     </a>
-    <div class="grid grid-cols-4 mb-2">
-        <Image class="imgIcon h-10 col-span-1" src={markerHouse} alt={'marker'} /> 
-        <p class="text-xl font-light col-span-3">{data.colonia}</p>
+    <div class="flex flex-row my-2 ">
+        <Image class="h-6 items-start w-6 mr-4" src={markerHouse} alt={'marker'} /> 
+        <p class="text-xl font-bold  text-mainBlue">{data.colonia}</p>
     </div>
-    <p>{data.direccion}</p>
-    <div class="grid grid-cols-2 mb-2">
-        <p class="bg-mainBlue w-[100px] text-white text-center font-bold">{data.costo}</p>
-        <div class="flex">
+    <p class="text-mainBlue my-1 h-14">{data.direccion}</p>
+    <div class="grid grid-cols-3 mb-2">
+        <div class="flex items-end my-2 col-span-1">
+            <p class="bg-mainBlue pt-1 w-[100px] h-8 text-white text-center font-bold">{data.costo}</p>
+
+        </div>
+        <div class="flex flex-col col-span-2">
             <div class="grid grid-cols-4 mb-2">
-                <p class="text-xl font-light col-span-3">{data.size}<sup>2</sup></p>
-                <Image class="imgIcon h-10 col-span-1" src={metersHouse} alt={'meters'} /> 
+                <p class="text-md text-mainBlue pt-1 text-right font-semibold col-span-3">{data.size}<sup>2</sup></p>
+                <Image class="imgIcon h-6 col-span-1" src={metersHouse} alt={'meters'} /> 
             </div>
             <div class="grid grid-cols-4 mb-2">
-                <p class="text-xl font-light col-span-3">{data.habitaciones}</p>
-                <Image class="imgIcon h-10 col-span-1" src={roomsHouse} alt={'rooms'} /> 
+                <p class="text-md text-right pt-1 text-mainBlue font-semibold col-span-3">{data.habitaciones}</p>
+                <Image class="imgIcon h-6 col-span-1" src={roomsHouse} alt={'rooms'} /> 
             </div>
 
         </div>
@@ -52,4 +57,17 @@ const { data } = Astro.props;
     sup {
       font-size: 0.8em; /* Ajusta el tamaño según tus preferencias */
     }
-  </style>
+    .watermark-container {
+        position: relative;
+        display: inline-block;
+    }
+
+    .watermark {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transform-origin: 50% 50%;
+
+    }
+</style>

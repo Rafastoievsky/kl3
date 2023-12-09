@@ -5,12 +5,12 @@ import PropiedadCard from './PropiedadCard.astro';
 
 
 ---
-<div class="md:px-[15rem] gap-4 items-center justify-center py-12">
-    <h2 class="text-4xl text-mainBlue text-left font-extrabold">
+<div class="md:px-[15rem] gap-4 items-center justify-center py-12 fondo">
+    <h2 class="text-6xl text-mainBlue text-left font-extrabold">
         PROPIEDADES DISPONIBLES
     </h2>
 
-    <div class="pt-10">
+    <div class="pt-10 grid grid-cols-3 gap-4">
 
         {
             propiedadesList.map((propiedad:any)=>(
@@ -22,3 +22,9 @@ import PropiedadCard from './PropiedadCard.astro';
 
     </div>
 </div>
+<style>
+    .fondo{
+        background: rgb(171,178,192);
+        background: linear-gradient(0deg, rgba(171,178,192,1) 0%, rgba(255,255,255,1) 100%);
+    }
+</style>

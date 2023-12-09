@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Banner from '../components/nosotros/Banner.astro'
+
+import Contacto from '../components/inicio/Contacto.astro';
+
+import 'leaflet/dist/leaflet.css';
+import QuienesSomos from '../components/nosotros/QuienesSomos.astro';
+import MisionVision from '../components/nosotros/MisionVision.astro';
+import Valores from '../components/nosotros/Valores.astro';
+
+---
+
+<Layout title="Welcome to Astro." description='test'>
+	<main>
+        <Banner />
+		<QuienesSomos />
+		<MisionVision />
+		<Valores />
+		<Contacto /> 
+	</main>
+</Layout>
+
+<style>
+
+</style>
