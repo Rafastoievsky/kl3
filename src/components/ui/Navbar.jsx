@@ -1,5 +1,5 @@
 import {useState } from "react";
-import { logo } from "../../assets";
+import { logo, telefono, llamada } from "../../assets";
 
 import { navLinks } from "../../constants";
 
@@ -14,11 +14,11 @@ const Navbar = () => {
   
   return (
     <div className="container center md:mx-20 z-50">
-      <nav className="flex items-center justify-between flex-wrap py-6 md:px-20 px-8">
+      <nav className="flex items-center justify-between flex-wrap py-6 md:px-20 px-8 z-50">
         <div className="flex items-center flex-shrink-0 text-white mr-6 lg:mr-24">
           <a href={'/'} className="cursor-pointer">
 
-            <img src={logo.src} className="md:w-100 md:h-16 w-48 mr-2" alt="Logo" />
+            <img src={logo.src} className="md:w-100 md:h-32 md:w-32 h-16 w-16 mr-2" alt="Logo" />
           </a>
         </div>
         <div className="block lg:hidden">
@@ -49,7 +49,7 @@ const Navbar = () => {
         >
             <div>
                 <div className="text-white font-extrabold flex justify-end text-2xl mb-2">
-                    <h2>¡AGENDA TU CITA! (662) 400 0007</h2>
+                    <h2>¡AGENDA TU CITA!  (662) 400 0007</h2>
                 </div>
                 <div className="text-sm lg:flex-grow navegacion">
                     {navLinks.map((item, index) => (

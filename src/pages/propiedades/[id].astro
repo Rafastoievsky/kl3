@@ -1,0 +1,30 @@
+---
+import Contacto from '../../components/inicio/Contacto.astro';
+import Banner from '../../components/propiedades/Banner.astro';
+import BigPropiedadCard from '../../components/propiedades/BigPropiedadCard.astro';
+
+import Layout from '../../layouts/Layout.astro';
+import {propiedadesList} from '../../constants'
+export async function getStaticPaths() {
+    return propiedadesList.map((item)=>{
+        return {
+            params:{id:item.id},
+            props:{item},
+        }
+    })
+}
+const {item} = Astro.props
+---
+<Layout title="Propiesdades KL3" description='test'>
+	<main>
+        <Banner />
+        <BigPropiedadCard item={item} />
+
+        <Contacto />
+
+</main>
+</Layout>
+
+<style>
+
+</style>

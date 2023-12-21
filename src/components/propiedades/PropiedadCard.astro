@@ -1,48 +1,86 @@
 ---
 
 import { Image } from 'astro:assets';
-import {markerHouse, metersHouse, roomsHouse, watermarkkl13} from '../../assets'
+import {markerHouse, metersHouse, roomsHouse, watermarkkl13, wcHouse, 
+    propFlipping, propRemate, propTraspaso, propVenta} from '../../assets'
 
 interface Props {
 	data: {
-        id: number,
-        picture: ImageMetadata,
-        colonia: string,
-        direccion: string,
-        size: string,
-        habitaciones: string,
-        costo: string,
+        id: number;
+        descripcion:string;
+        portada: ImageMetadata;
+        pictures?: [ImageMetadata];
+        colonia: string;
+        direccion: string;
+        size: string;
+        habitaciones: string;
+        wc:string
+        costo: number;
+        servicio:string
     } 
+}
+
+
+const formatearComoMoneda = (numero:number)=>{
+
+    return numero.toLocaleString('es-MX', {
+        style: 'currency',
+        currency: 'MXN'
+    })
 }
 
 const { data } = Astro.props;
 ---
 
-<div class="bg-white shadow-xl p-8 flex flex-col justify-center">
-    <a href="#">
-        <div class="watermark-container">
-            <img class="w-full h-[190px]" src={data.picture.src} alt={'casa'} /> 
-            <img class="watermark" src={watermarkkl13.src} alt={'watermark'} /> 
-        </div>
-    </a>
+<div class="bg-white shadow-xl p-8 flex flex-col justify-center ">
+    <div class="flex flex-col items-center">
+        <a href="#">
+            <div class="watermark-container">
+                <img class="w-full h-[200px]" src={data.portada.src} alt={'casa'} /> 
+                <img class="watermark" src={watermarkkl13.src} alt={'watermark'} /> 
+            </div>
+        </a>
+
+    </div>
     <div class="flex flex-row my-2 ">
         <Image class="h-6 items-start w-6 mr-4" src={markerHouse} alt={'marker'} /> 
         <p class="text-xl font-bold  text-mainBlue">{data.colonia}</p>
     </div>
     <p class="text-mainBlue my-1 h-14">{data.direccion}</p>
     <div class="grid grid-cols-3 mb-2">
-        <div class="flex items-end my-2 col-span-1">
-            <p class="bg-mainBlue pt-1 w-[100px] h-8 text-white text-center font-bold">{data.costo}</p>
+        <div class="flex items-center my-2 col-span-1">
+            <p class="bg-mainBlue p-1 px-2  w-[185px] h-8 text-white text-center font-bold">
+                {formatearComoMoneda(data.costo)}
+            </p>
 
         </div>
         <div class="flex flex-col col-span-2">
-            <div class="grid grid-cols-4 mb-2">
-                <p class="text-md text-mainBlue pt-1 text-right font-semibold col-span-3">{data.size}<sup>2</sup></p>
-                <Image class="imgIcon h-6 col-span-1" src={metersHouse} alt={'meters'} /> 
+            <div class="flex justify-end mb-2">
+                <p class="text-md text-mainBlue  pt-1 text-right font-semibold mr-4">{`${data.size} m`}<sup>2</sup></p>
+                <Image class="imgIcon h-6 w-6" src={metersHouse} alt={'meters'} /> 
             </div>
-            <div class="grid grid-cols-4 mb-2">
-                <p class="text-md text-right pt-1 text-mainBlue font-semibold col-span-3">{data.habitaciones}</p>
-                <Image class="imgIcon h-6 col-span-1" src={roomsHouse} alt={'rooms'} /> 
+
+
+            <div class="flex justify-end mb-2">
+                <p class="text-md text-right pt-1 text-mainBlue font-semibold mr-4">
+                    {`${data.habitaciones} habitaciones`}
+                </p>
+                <Image class="imgIcon h-6 w-6" src={roomsHouse} alt={'rooms'} /> 
+            </div>
+            <div class="flex justify-end mb-2">
+                <p class="text-md text-right pt-1 text-mainBlue font-semibold mr-4">{`${data.wc} ${data.wc == "1" ? "baño" : "baños"}`}</p>
+                <Image class="imgIcon h-6 w-6" src={wcHouse} alt={'rooms'} /> 
+            </div>
+            <div class="flex justify-end mb-2 items-center">
+                <p class="text-md text-right pt-1 text-mainBlue font-semibold mr-4">{`Por medio de ${data.servicio}`}</p>
+                <Image class="imgIcon h-6 w-6" src={
+                    data.servicio == 'Flipping Inmobiliario' ? propFlipping :  
+                    data.servicio == 'Remates Bancarios' ? propRemate :  
+                    data.servicio == 'Venta con Crédito' ? propVenta : propTraspaso  
+                    } 
+                    
+                    
+                    alt={'rooms'} /> 
             </div>
 
         </div>

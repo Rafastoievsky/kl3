@@ -1,0 +1,16 @@
+sup {
+    font-size: 0.8em; /* Ajusta el tamaño según tus preferencias */
+  }
+  .watermark-container {
+      position: relative;
+      display: inline-block;
+  }
+
+  .watermark {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transform-origin: 50% 50%;
+
+  }

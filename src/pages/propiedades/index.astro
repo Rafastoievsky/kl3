@@ -1,0 +1,21 @@
+---
+import Contacto from '../../components/inicio/Contacto.astro';
+import Banner from '../../components/propiedades/Banner.astro';
+import AllPropiedades from '../../components/propiedades/AllPropiedades';
+import Layout from '../../layouts/Layout.astro';
+
+
+---
+
+<Layout title="Propiesdades KL3" description='test'>
+	<main>
+        <Banner />
+        <AllPropiedades client:load />
+        <Contacto />
+
+	</main>
+</Layout>
+
+<style>
+
+</style>

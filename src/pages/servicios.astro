@@ -6,12 +6,15 @@ import Respaldo from '../components/inicio/Respaldo.astro';
 import Contacto from '../components/inicio/Contacto.astro';
 
 import 'leaflet/dist/leaflet.css';
+import Banner from '../components/servicios/Banner.astro';
+import AllServicios from '../components/servicios/AllServicios.astro';
 
 ---
 
-<Layout title="Welcome to Astro." description='test'>
+<Layout title="Servicios KL3" description='test'>
 	<main>
-
+        <Banner />
+		<AllServicios />
 		<Respaldo />
 		<Proceso />
 		<Contacto /> 

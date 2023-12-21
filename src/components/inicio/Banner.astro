@@ -15,16 +15,16 @@
 
     </div>
   </div>
-  <div class="bg-mainBlue secondBg grid md:grid-cols-2 text-gray-50 px-8 max-h-[550px] ">
-    <div class="flex justify-center  h-screen md:px-4 mt-8 md:mt-0">
-      <iframe class="md:w-[90%] md:h-[50%] h-[25%]"   src="https://www.youtube.com/embed/fFltC63CFNw?si=X4Y2f39DNksV-IAt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <div class="bg-mainBlue secondBg grid md:grid-cols-2 text-gray-50 px-8 md:max-h-[550px]  ">
+    <div class="flex justify-center  md:h-screen h-[250px] md:px-4 mt-8 md:mt-0">
+      <iframe class="md:w-[90%] md:h-[50%] h-full"   src="https://www.youtube.com/embed/fFltC63CFNw?si=X4Y2f39DNksV-IAt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
-    <div class="md:ml-24 pt-12">
+    <div class="md:ml-24 md:pt-12 my-4">
       <h2 class="md:text-4xl text-2xl md:text-left text-center italic font-bold mb-2">
         ¡Descubre cómo podemos ayudarte <br />
         a lograr tus metas inmobiliarias!
       </h2>
-      <p class="md:text-3xl text-xl md:text-left text-center italic  my-6 w-3/4">
+      <p class="md:text-3xl text-xl md:text-left text-center italic  md:my-6 md:w-3/4">
         Creemos en la transformación 
         emocional que cada transacción 
         de Bienes Raíces representa en la 
@@ -38,15 +38,25 @@
 
 </div>
 <style>
+    :root{
+            --borderRadius: 0 0 375px 0;
+            --SecondborderRadius: 500px 0 0 0;
+    }
+    @media (max-width: 767px) and (orientation: portrait) {
+        :root{
+          --borderRadius: 0 0 175px 0;
+          --SecondborderRadius: 175px 0 0 0;
+        }
+    }
   .header {
     background-image: url(../../assets/img/bannerInicio.png);
     background-position: center;
     background-size: cover;
     height: 84vh;
-    border-radius: 0 0 375px 0;
+    border-radius:var(--borderRadius); 
   }
 
   .secondBg{
-    border-radius: 500px 0 0 0;
+    border-radius: var(--SecondborderRadius); 
   }
 </style>

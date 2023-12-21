@@ -98,8 +98,8 @@ const ContactForm: FC<Props> = ({ pathname }) => {
   const form: any = useRef();
 
   return (
-    <div className="bg-secondBlue md:h-[600px] p-16 pt-24">
-      <h1 className="text-5xl font-extrabold text-gray-50">
+    <div className="bg-secondBlue md:h-[600px]  p-16 pt-24">
+      <h1 className="md:text-5xl text-2xl font-extrabold text-gray-50">
         Contáctanos
       </h1>
      {showToasty ? ( 

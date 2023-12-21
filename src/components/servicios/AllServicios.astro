@@ -1,0 +1,322 @@
+---
+import { Image } from 'astro:assets';
+import { rematesBco, servicios01, servicios02, servicios03, servicios04, servicios05, servicios06,ventasBco } from '../../assets'
+
+---
+
+<div class="grid md:grid-cols-2 bg-[#E8EBEF] md:px-16 py-12">
+    <div class="col-span-1 ">
+        <Image class="w-full items-start h-auto mr-4" src={servicios01} alt={'servicios01'} /> 
+        <div class="flex  items-center justify-center">
+            <a href="#" class="text-white bg-mainBlue border-white p-4 mt-20 text-center rounded-3xl w-3/5 text-3xl border-8 font-semibold">
+                Solicita este servicio
+            </a> 
+
+        </div>
+    </div>
+    <div class="flex flex-col p-14 justify-center items-center">
+        <h2 class="text-mainBlue md:text-5xl text-3xl font-bold text-center mb-4">
+            REMATES BANCARIOS
+        </h2>
+        <p class="text-2xl font-light text-justify">
+            Ofrecemos propiedades a precios excepcionales 
+            mediante subastas y adquisiciones de bienes en 
+            situación de remate bancario. Ideal para 
+            inversores buscando oportunidades con gran 
+            potencial de retorno.
+
+        </p>
+        <Image class="w-[200px] items-start h-auto pt-12" src={rematesBco} alt={'remates'} /> 
+
+
+    </div>
+</div>
+
+    <div class="grid md:grid-cols-3 md:px-16 px-4 py-12 bg-white gap-10">
+        <div class="shadowBox flex flex-col p-8 justify-center items-center">
+            <h2 class="text-mainBlue md:text-3xl text-3xl font-bold text-center mb-4">
+                Cesión de Derecho Litigioso
+            </h2>
+            <p class="text-2xl font-light text-justify">
+                Este servicio, es la
+                transmisión a un tercero 
+                (nosotros) de los derechos 
+                que tiene un acreedor en 
+                contra de su deudor, es decir 
+                pasamos a ser acreedores 
+                del deudor.
+    
+            </p>
+
+        </div>
+        <div class="shadowBox flex flex-col p-8 justify-center items-center">
+            <h2 class="text-mainBlue md:text-3xl text-3xl font-bold text-center mb-4">
+                Cesión de Derechos Adjudicatorios
+            </h2>
+            <p class="text-2xl font-light text-justify">
+                En este caso, la propiedad 
+                ya ha sido rematada por el 
+                juez y por lo tanto se ha 
+                adjudicado a la institución 
+                financiera que está a cargo, 
+                sin embargo, aún no se 
+                encuentra escriturada a 
+                nombre de dicho organismo.
+    
+            </p>
+
+        </div>
+        <div class="shadowBox flex flex-col p-8 justify-center items-center">
+            <h2 class="text-mainBlue md:text-3xl text-3xl font-bold text-center mb-4">
+                Vivienda Adjudicada
+            </h2>
+            <p class="text-2xl font-light text-justify">
+                Es un inmueble que paso por 
+                un proceso de adjudicación, 
+                por el banco o institución
+                que se adeuda, para 
+                legalmente tomar posesión 
+                del bien inmueble y ponerlo 
+                a la venta a un precio mucho 
+                menor al valor comercial.
+    
+            </p>
+
+        </div>
+    </div>
+    <div class="grid md:grid-cols-2 bg-[#E8EBEF] md:px-16 py-12">
+        <div class="flex flex-col md:p-14 p-10 justify-center items-center">
+            <h2 class="text-mainBlue md:text-5xl text-3xl font-bold text-center mb-4">
+                VENTAS A TERCEROS
+            </h2>
+            <p class="text-2xl font-light text-justify">
+                Facilitamos la venta de casas en óptimas 
+                condiciones, manejando contratos y procesos 
+                de corretaje, asegurando transacciones exitosas 
+                para nuestros clientes. Nuestros honorarios por 
+                este servicio es el 6% por el corretaje de la 
+                vivienda.
+    
+            </p>
+            <Image class="w-[200px] items-start h-auto pt-12" src={ventasBco} alt={'remates'} /> 
+    
+    
+        </div>
+            <div class="col-span-1 ">
+                <Image class="md:w-full w-[280px] items-start h-auto md:mr-4" src={servicios02} alt={'servicios01'} /> 
+                <div class="flex  items-center justify-center">
+                    <a href="#" class="text-white bg-mainBlue border-white p-4 mt-20 text-center rounded-3xl w-3/5 
+                    md:text-3xl text-xl border-8 font-semibold">
+                        Solicita este servicio
+                    </a> 
+        
+                </div>
+            </div>
+        </div>
+  
+        <div class="grid md:grid-cols-2 bg-[#E8EBEF] px-16 py-12">
+            <div class="col-span-1 ">
+                <Image class="md:w-full w-[280px] items-start h-auto md:mr-4" src={servicios03} alt={'servicios03'} /> 
+                <div class="flex  items-center justify-center">
+                    <a href="#" class="text-white bg-mainBlue border-white p-4 mt-20 text-center 
+                    rounded-3xl md:w-3/5 md:text-3xl text-xl  border-8 font-semibold">
+                        Solicita este servicio
+                    </a> 
+        
+                </div>
+            </div>
+            <div class="flex flex-col md:p-14 mt-10 justify-center items-center">
+                <h2 class="text-mainBlue md:text-5xl text-3xl font-bold text-center">
+                    CANCELACIÓN DE HIPOTECA
+                </h2>
+                <p class="text-mainBlue md:text-3xl text-3xl  text-center mb-2">(Infonavit e Hipotecario)</p>
+                <p class="text-2xl font-light text-justify">
+                    Ayudamos a nuestros clientes a liberarse de sus 
+                    compromisos hipotecarios, ya sea por traspaso, 
+                    venta, o refinanciamiento, brindando soluciones 
+                    a sus necesidades financieras.
+        
+                </p>
+                <h2 class="text-mainBlue bg-white p-8 md:text-5xl text-3xl font-bold text-center my-10">
+                    Traspaso
+                </h2>
+                <h2 class="text-mainBlue bg-white p-8 md:text-3xl text-3xl font-bold text-center my-8">
+                    Flipping Inmobiliario
+                </h2>
+                <h2 class="text-mainBlue bg-white p-8 md:text-3xl text-3xl font-bold text-center my-8">
+                    2 con 5 de Infonavit
+                </h2>
+                <p class="text-mainBlue md:text-2xl text-3xl  text-center mb-2">(Facilitamos la compra <br/> de casa
+                    y el pago a pasivo)</p>
+        
+        
+            </div>
+        </div>
+        <div class="grid md:grid-cols-2 bg-[#E8EBEF] md:px-16 py-12">
+            <div>
+                <div class="flex flex-col p-14 justify-center items-center">
+                    <h2 class="text-mainBlue md:text-5xl text-3xl font-bold text-center mb-4">
+                        FLIPPING INMOBILIARIO
+                    </h2>
+                    
+                    <p class="text-2xl font-light text-justify">
+                        Convertimos propiedades en oportunidades de 
+                        inversión a través de diversas estrategias y 
+                        soluciones legales, maximizando el valor de tu 
+                        inversión.
+                        
+                    </p>
+                </div>    
+                <div class="flex flex-col p-14 pt-2">
+                    <p class="text-mainBlue md:text-2xl text-3xl">Cumpliendo lo siguiente:</p>
+                    <h2 class="text-mainBlue md:text-4xl text-3xl font-semibold  my-4">
+                        - Con un contrato de asociación participativa, sin problemas
+                    </h2>
+                    <h2 class="text-mainBlue md:text-4xl text-3xl font-semibold  my-4">
+                        - Con juicio sucesorio Intestamentario
+                    </h2>
+                    <h2 class="text-mainBlue md:text-4xl text-3xl font-semibold  my-4">
+                        - Problemas de corrección en la Escritura
+                    </h2>
+                    <h2 class="text-mainBlue md:text-4xl text-3xl font-semibold  my-4">
+                        - Con patrimonio familiar
+                    </h2>
+                    <h2 class="text-mainBlue md:text-4xl text-3xl font-semibold  my-4">
+                        - Con reserva de dominio
+                    </h2>
+
+                </div>
+
+          
+
+                    
+                    
+                </div>
+                <div class="col-span-1 flex flex-col items-center justify-center">
+                    <Image class="md:w-full w-[280px] items-start h-auto md:mr-4" src={servicios04} alt={'servicios04'} /> 
+                    <div class="flex  items-center justify-center">
+                        <a href="#" class="text-white bg-mainBlue border-white p-4 mt-20 text-center 
+                        rounded-3xl md:w-3/5 md:text-3xl text-xl border-8 font-semibold">
+                            Solicita este servicio
+                        </a> 
+            
+                    </div>
+                </div>
+        </div>
+        <div class="grid md:grid-cols-2 bg-[#E8EBEF] md:px-16 py-12">
+            <div class="col-span-1 flex flex-col items-center justify-center">
+                <Image class="md:w-full w-[280px] items-start h-auto md:mr-4" src={servicios05} alt={'servicios05'} /> 
+                <div class="flex  items-center justify-center">
+                    <a href="#" class="text-white bg-mainBlue border-white p-4 mt-20 text-center 
+                    rounded-3xl md:w-3/5 md:text-3xl text-xl border-8 font-semibold">
+                        Solicita este servicio
+                    </a> 
+        
+                </div>
+            </div>
+            <div>
+                <div class="flex flex-col p-14 justify-center items-center">
+                    <h2 class="text-mainBlue md:text-5xl text-3xl font-bold text-center mb-4">
+                        TRÁMITES INMOBILIARIOS
+                    </h2>
+                    
+                    <p class="text-2xl font-light text-justify">
+                        Simplificamos y gestionamos todos los aspectos 
+                        legales y administrativos de tus transacciones 
+                        inmobiliarias, desde avalúos hasta escrituración 
+                        y certificados de valor catastral.
+                        
+                    </p>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <h2 class="text-mainBlue bg-white p-2 md:text-3xl text-3xl font-bold text-center my-8">
+                            Infonavit
+                        </h2>
+                        <h2 class="text-mainBlue bg-white p-2 md:text-3xl text-3xl font-bold text-center my-8">
+                            Fovissste
+                        </h2>
+                        <h2 class="text-mainBlue bg-white p-2 md:text-3xl text-3xl font-bold text-center my-8">
+                            Hipotecario
+                        </h2>
+                    </div>
+                </div>    
+                <div class="flex flex-col p-14 pt-2">
+                    <p class="text-mainBlue md:text-2xl text-3xl">Te ofrecemos:</p>
+                    <h2 class="text-mainBlue md:text-4xl text-3xl font-semibold  mt-4">
+                        - Gestión completa de Crédito Infonavit
+                    </h2>
+                    <p class="text-mainBlue md:text-2xl text-3xl  text-center mb-2">
+                        (Avalúo, Inscripción y programación de Firmas)
+                    </p>
+                    <h2 class="text-mainBlue md:text-4xl text-3xl font-semibold  my-4">
+                        - Cancelación de Hipoteca ante Registro Público
+                    </h2>
+                    <h2 class="text-mainBlue md:text-4xl text-3xl font-semibold  my-4">
+                        - Gestoría de Certificado de Valor Catastral
+                    </h2>
+                    <h2 class="text-mainBlue md:text-4xl text-3xl font-semibold  mt-4">
+                        - Gestoría de Trámites para la Firma de Cesiones
+                    </h2>
+                    <p class="text-mainBlue md:text-2xl text-3xl  text-center mb-2">
+                        (Escrituras, CLG, Compulsas, Estados de Cuenta, etc.)
+                    </p>
+
+
+                </div>
+
+          
+
+                    
+                    
+                </div>
+
+        </div>
+        <div class="grid md:grid-cols-2 bg-[#E8EBEF] md:px-16 py-12">
+
+            <div class="flex flex-col md:p-14 p-8 justify-center items-center">
+                <h2 class="text-mainBlue md:text-5xl text-3xl font-bold text-center">
+                    COMPRA DE VIVIENDAS
+                </h2>
+            
+                <p class="text-2xl font-light text-justify">
+                    Adquirimos propiedades en diversas
+                    condiciones, incluyendo viviendas invadidas, 
+                    quemadas, desmanteladas, intestadas y más, 
+                    brindando soluciones de compra y renovación
+        
+                </p>
+                <h2 class="text-mainBlue bg-white p-8 md:text-4xl text-3xl font-bold text-center my-6">
+                    Invadidas
+                </h2>
+                <h2 class="text-mainBlue bg-white p-8 md:text-4xl text-3xl font-bold text-center my-6">
+                    Quemadas
+                </h2>
+                <h2 class="text-mainBlue bg-white p-8 md:text-4xl text-3xl font-bold text-center my-6">
+                    Desmanteladas
+                </h2>
+                <h2 class="text-mainBlue bg-white p-8 md:text-4xl text-3xl font-bold text-center my-6">
+                    Intestadas
+                </h2>
+
+        
+        
+            </div>
+            <div class="col-span-1  flex flex-col items-center justify-center">
+                <Image class="md:w-full w-[280px] items-start h-auto md:mr-4" src={servicios06} alt={'servicios06'} /> 
+                <div class="flex  items-center justify-center">
+                    <a href="#" class="text-white bg-mainBlue border-white p-4 mt-20 text-center 
+                    rounded-3xl md:w-3/5 md:text-3xl text-xl border-8 font-semibold">
+                        Solicita este servicio
+                    </a> 
+        
+                </div>
+            </div>
+        </div>
+            
+            
+            <style>
+    .shadowBox {
+        border-right: 12px solid #4A668E;
+        border-bottom: 12px solid #4A668E;
+    }
+</style>
+

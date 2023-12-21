@@ -4,11 +4,11 @@ import { nosotros01, nosotros02, nosotros03 } from '../../assets'
 
 ---
 
-<div class="grid grid-cols-2">
-    <div class="col-span-1">
+<div class="grid md:grid-cols-2">
+    <div class="col-span-1 md:block hidden">
         <Image class="w-full items-start h-auto mr-4" src={nosotros01} alt={'Nosotros01'} /> 
     </div>
-    <div class="flex flex-col p-14 justify-center bg-[#E8EBEF]">
+    <div class="flex flex-col p-10 justify-center bg-[#E8EBEF]">
         <h2 class="text-mainBlue md:text-5xl text-3xl font-bold text-center mb-4">
             ¿QUIENES SOMOS?
         </h2>
@@ -24,12 +24,17 @@ import { nosotros01, nosotros02, nosotros03 } from '../../assets'
             cliente experimente la alegría y satisfacción de 
             encontrar el lugar perfecto para crear recuerdos 
             inolvidables.
-
+            
         </p>
-
-
+        
+        
     </div>
-    <div class="flex flex-col p-14 justify-center bg-[#E8EBEF]">
+    <div class="col-span-1 md:hidden block">
+        <Image class="w-full items-start h-auto mr-4" src={nosotros01} alt={'Nosotros01'} /> 
+    </div>
+</div>
+<div class="grid md:grid-cols-2">   
+    <div class="flex flex-col p-10 justify-center bg-[#E8EBEF]">
         <p class="text-2xl font-light text-justify">
             Somos facilitadores de historias y, con cada 
             transacción, ayudamos a nuestros clientes a 
@@ -51,10 +56,12 @@ import { nosotros01, nosotros02, nosotros03 } from '../../assets'
     <div class="col-span-1">
         <Image class="w-full items-start h-auto mr-4" src={nosotros02} alt={'Nosotros02'} /> 
     </div>
-    <div class="col-span-1">
+</div>
+<div class="grid md:grid-cols-2">      
+    <div class="col-span-1 md:block hidden">
         <Image class="w-full items-start h-auto mr-4" src={nosotros03} alt={'Nosotros03'} /> 
     </div>
-    <div class="flex flex-col p-14 justify-center bg-[#E8EBEF] bottomText">
+    <div class="flex flex-col p-10 justify-center bg-[#E8EBEF] md:bottomText">
         <p class="text-2xl font-light text-justify">
             Nos enorgullece ofrecer a nuestros clientes la 
             seguridad y confianza que merecen al comprar, 
@@ -71,7 +78,9 @@ import { nosotros01, nosotros02, nosotros03 } from '../../assets'
 
 
     </div>
-
+    <div class="col-span-1 md:hidden block">
+        <Image class="w-full items-start h-auto mr-4" src={nosotros03} alt={'Nosotros03'} /> 
+    </div>
 
 
 </div>

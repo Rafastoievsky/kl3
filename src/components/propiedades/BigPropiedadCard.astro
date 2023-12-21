@@ -1,0 +1,101 @@
+---
+
+const {item} = Astro.props
+import Slider from '../ui/Slider';
+import {markerHouse, metersHouse, roomsHouse, wcHouse, 
+    propFlipping, propRemate, propTraspaso, propVenta} from '../../assets'
+
+const formatearComoMoneda = (numero:number)=>{
+
+return numero.toLocaleString('es-MX', {
+    style: 'currency',
+    currency: 'MXN'
+})
+}
+
+
+
+---
+<div class="bg-[#E8EBEF] md:px-[10rem] py-10">
+    <div class="flex justify-between items-center">
+        <h1 class="text-4xl text-mainBlue font-bold mb-8">{item.servicio}</h1>
+        <a href="/propiedades" class="text-white bg-mainBlue border-white 
+        hover:text-mainBlue hover:bg-white hover:border-mainBlue 
+        p-1  text-center rounded-3xl w-1/5 text-xl border-4 font-semibold">
+            Regresar
+        </a> 
+
+    </div>
+
+    <div class="bg-white shadow-xl grid grid-cols-2">
+        <div class="">
+            <div class="flex items-center justify-center gap-2 p-8">
+                {
+                    item.pictures ? 
+                    <Slider slides={item?.pictures}  client:load/> 
+                    : null
+                }
+            </div>
+
+        </div>
+        <div class="p-8">
+            <p class="text-mainBlue text-justify">{item.descripcion}</p>
+            <div class="flex justify-end">
+                <p class="bg-mainBlue p-1 px-2 my-8  w-[185px] h-8 text-white text-center font-bold">
+                    {formatearComoMoneda(item.costo)}
+                </p>
+            </div>
+            <div class="flex justify-start mb-2 items-center">
+                <img
+                  class="imgIcon h-6 w-6 mr-2"
+                  src={
+                    item.servicio == "Flipping Inmobiliario"
+                      ? propFlipping.src
+                      : item.servicio == "Remates Bancarios"
+                      ? propRemate.src
+                      : item.servicio == "Venta con Crédito"
+                      ? propVenta.src
+                      : propTraspaso.src
+                  }
+                  alt={"rooms"}
+                />
+              <p class="text-md text-right pt-1 text-mainBlue font-semibold mr-4">{`Por medio de ${item.servicio}`}</p>
+            </div>
+            <div class="flex flex-col col-span-2">
+                <div class="flex justify-start mb-2">
+                  <img class="imgIcon h-6 w-6 mr-2" src={markerHouse.src} alt={"meters"} />
+                  <p class="text-md text-mainBlue  pt-1 text-right font-semibold mr-4">
+                    {`${item.colonia} , ${item.direccion}`}
+                  </p>
+                </div>
+                <div class="flex justify-start mb-2">
+                  <img class="imgIcon h-6 w-6 mr-2" src={metersHouse.src} alt={"meters"} />
+                  <p class="text-md text-mainBlue  pt-1 text-right font-semibold mr-4">
+                    {`${item.size} m`}
+                    <sup>2</sup>
+                  </p>
+                </div>
+      
+                <div class="flex justify-start mb-2">
+                  <img class="imgIcon h-6 w-6 mr-2" src={roomsHouse.src} alt={"rooms"} />
+                  <p class="text-md text-right pt-1 text-mainBlue font-semibold mr-4">
+                    {`${item.habitaciones} habitaciones`}
+                  </p>
+                </div>
+                <div class="flex justify-start mb-2">
+                  <img class="imgIcon h-6 w-6 mr-2" src={wcHouse.src} alt={"rooms"} />
+                  <p class="text-md text-right pt-1 text-mainBlue font-semibold mr-4">{`${
+                    item.wc
+                  } ${item.wc == "1" ? "baño" : "baños"}`}</p>
+                </div>
+
+              </div>
+        </div>
+
+
+    </div>
+
+
+
+
+</div>

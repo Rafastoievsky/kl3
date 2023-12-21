@@ -9,30 +9,30 @@ const pathname = Astro.url.pathname;
 
 ---
 
-<div id="contact" class=" bg-gray-50 flex flex-col justify-center items-center pb-12 ">
+<div id="contact" class=" bg-gray-50 flex flex-col justify-center items-center pb-12">
     <div class="mb-10 bg-mainBlue text-center w-full py-16">
-        <h2 class="text-white text-5xl font-bold">¡CONTÁCTANOS Y TRABAJEMOS JUNTOS</h2>
-        <h1 class="text-white text-7xl  font-bold">EN ENCONTRAR TU LUGAR IDEAL!</h1>
+        <h2 class="text-white md:text-5xl text-2xl font-bold">¡CONTÁCTANOS Y TRABAJEMOS JUNTOS</h2>
+        <h1 class="text-white md:text-7xl text-2xl font-bold">EN ENCONTRAR TU LUGAR IDEAL!</h1>
     </div>
     <div class="grid md:grid-cols-4 ">
 
         <div class="flex flex-col justify-center pt-8 order-3 md:order-1">
             <p class="text-lg text-center font-light text-mainBlue">kl3.bienesraices@gmail.com</p>
-            <div class="flex my-5">
+            <div class="flex my-5 px-10">
                 <a href="#">
-                    <Image class="imgIcon h-14 col-span-1" src={llamada} alt={'llamada'} /> 
+                    <Image class=" h-14 col-span-1" src={llamada} alt={'llamada'} /> 
                 </a>
                 <a href="#">
-                    <Image class="imgIcon h-14 col-span-1" src={tiktok} alt={'tiktok'} /> 
+                    <Image class=" h-14 col-span-1" src={tiktok} alt={'tiktok'} /> 
                 </a>
                 <a href="#">
-                    <Image class="imgIcon h-14 col-span-1" src={instagram} alt={'instagram'} /> 
+                    <Image class=" h-14 col-span-1" src={instagram} alt={'instagram'} /> 
                 </a>
                 <a href="#">
-                    <Image class="imgIcon h-14 col-span-1" src={facebook} alt={'facebook'} /> 
+                    <Image class=" h-14 col-span-1" src={facebook} alt={'facebook'} /> 
                 </a>
             </div>
-            <div class="flex flex-col  p-4  bg-mainBlue contactBg text-white mb-10">
+            <div class="flex flex-col  p-4  bg-mainBlue contactBg text-white mb-10 px-10">
          
                     <div class="grid grid-cols-4 mb-2">
                         <Image class="imgIcon h-10 col-span-1" src={maletin} alt={'maletin'} /> 
@@ -47,7 +47,7 @@ const pathname = Astro.url.pathname;
 
               
             </div>
-            <div class="flex flex-col  p-4  bg-mainBlue contactBg text-white">
+            <div class="flex flex-col  p-4  bg-mainBlue contactBg text-white px-10">
          
                     <div class="grid grid-cols-4 mb-2">
                         <Image class="imgIcon h-10 col-span-1" src={maletin} alt={'maletin'} /> 
@@ -63,7 +63,7 @@ const pathname = Astro.url.pathname;
               
             </div>
         </div>
-        <div class="md:col-span-2 md:mx-5 order-2">
+        <div class="md:col-span-2 md:mx-5 order-2 ">
             <ContactForm client:load pathname={pathname} />
 
         </div>

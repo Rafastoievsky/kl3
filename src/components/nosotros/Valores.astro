@@ -3,7 +3,7 @@ import { Image } from 'astro:assets';
 import { calidad, compromiso, confianza, excelencia, honestidad, orientacion } from '../../assets'
 ---
 
-<div class="flex flex-col justify-center py-40  bg-[#596C8A] text-white">
+<div class="flex flex-col justify-center py-40 px-8  bg-[#596C8A] text-white">
     <div class="md:px-[15rem]">
         <h1 class="md:text-8xl text-3xl font-bold text-center mb-8">
             LOS VALORES <br />
@@ -22,7 +22,7 @@ import { calidad, compromiso, confianza, excelencia, honestidad, orientacion } f
 
 
     </div>
-    <div class="grid grid-cols-6 mt-10 gap-6 md:px-[12rem]">
+    <div class="grid md:grid-cols-6 mt-10 gap-6 md:px-[12rem]">
         <div class="flex flex-col text-center justify-center items-center">
             <Image class="w-32 items-start h-32 my-4 " src={calidad} alt={'Calidad'} /> 
             <p class="text-2xl font-bold">CALIDAD</p>

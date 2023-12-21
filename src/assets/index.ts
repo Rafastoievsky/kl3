@@ -16,6 +16,9 @@ import telefono from './icons/telefono.svg'
 import markerHouse from './icons/MarkerHouse.svg'
 import metersHouse from './icons/metersHouse.svg'
 import roomsHouse from './icons/roomsHouse.svg'
+import wcHouse from './icons/wcs.svg'
+import leftArrow from './icons/ui/arrow-circle-left-svgrepo-com.svg'
+import rightArrow from './icons/ui/arrow-circle-right-svgrepo-com.svg'
 
 import messageLeft from './icons/message_left.svg'
 import messageRight from './icons/message_right.svg'
@@ -44,6 +47,18 @@ import orientacion from './icons/nosotros/orientacion.svg'
 import mision from './icons/nosotros/mision.svg'
 import vision from './icons/nosotros/vision.svg'
 
+/* ICONOS SERVICIOS */
+import rematesBco from './icons/servicios/remates_bco.svg'
+import ventasBco from './icons/servicios/ventas_bco.svg'
+
+
+/* ICONOS PROPIEDADES */
+import propRemate from './icons/propiedades/remate.svg'
+import propVenta from './icons/propiedades/venta.svg'
+import propFlipping from './icons/propiedades/flipping.svg'
+import propTraspaso from './icons/propiedades/traspaso.svg'
+
+
 /* IMAGES */
 import casa01 from './img/casa01.jpg'
 import casa02 from './img/casa02.jpg'
@@ -62,11 +77,31 @@ import nosotros03 from './img/nosotros/nosotros03.png'
 import nosotros04 from './img/nosotros/nosotros04.png'
 import nosotros05 from './img/nosotros/nosotros05.png'
 
+/* IMAGENES SERVICIOS */
+import bannerServicios from './img/servicios/bannerServicios.png'
+import servicios01 from './img/servicios/servicios01.png'
+import servicios02 from './img/servicios/servicios02.png'
+import servicios03 from './img/servicios/servicios03.png'
+import servicios04 from './img/servicios/servicios04.png'
+import servicios05 from './img/servicios/servicios05.png'
+import servicios06 from './img/servicios/servicios06.png'
+import cancelacionServ from './img/servicios/Cancelacion.png'
+import comprasServ from './img/servicios/Compras.png'
+import flippingServ from './img/servicios/Flipping.png'
+import rematesServ from './img/servicios/Remates.png'
+import tramitesServ from './img/servicios/Tramites.png'
+import ventaServ from './img/servicios/Venta.png'
+
 /* DIAGRAMS */
 import proceso from './img/proceso.svg'
 
-
-
+/* IMAGENES PROPIEDADES */
+import comedor from './img/propiedades/comedor.jpg'
+import cuarto from './img/propiedades/cuarto.jpg'
+import cuartoDos from './img/propiedades/cuartoDos.jpg'
+import sala from './img/propiedades/sala.jpg'
+import sanitario from './img/propiedades/sanitario.jpg'
+import sanitarioDos from './img/propiedades/sanitarioDos.jpg'
 
 
 export{
@@ -90,6 +125,7 @@ export{
     //casa04,
     markerHouse,
     metersHouse,
+    wcHouse,
     roomsHouse,
     watermarkkl13,
     remates,
@@ -126,4 +162,38 @@ export{
     nosotros03,
     nosotros04,
     nosotros05,
+
+    bannerServicios,
+    servicios01,
+    servicios02,
+    servicios03,
+    servicios04,
+    servicios05,
+    servicios06,
+
+    rematesBco,
+    ventasBco,
+
+    propRemate,
+    propVenta,    
+    propFlipping,
+    propTraspaso,
+    leftArrow,
+    rightArrow,
+
+    comedor,
+    cuarto,
+    cuartoDos,
+    sala,
+    sanitario,
+    sanitarioDos,
+
+    cancelacionServ,
+    comprasServ,
+    flippingServ,
+    rematesServ,
+    tramitesServ,
+    ventaServ,
+
+
 }
